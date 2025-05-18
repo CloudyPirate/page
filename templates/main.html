@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alleyrats Esports Club</title>
+    <link rel="icon" href=
+"./static/logo.png"
+        type="image/png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black">
+    
+    <!-- Navbar -->
+    <nav class="bg-white border-black dark:bg-black">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="#programs" class="flex items-center space-x-3 rtl:space-x-reverse">
+              <img src="./static/logo.png" class="h-11" alt="Alleyrats Logo" />
+
+          <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-black md:dark:bg-black dark:bg-black">
+              <li>
+                <a href="#hero" class="bg-black hover:bg-[#ED1B35] text-white font-semibold hover:text-white py-3 px-3 rounded-lg transition duration-300" aria-current="page">Home</a>
+              </li>
+              <li>
+                <a href="#services" class="bg-black hover:bg-[#ED1B35] text-white font-semibold hover:text-white py-3 px-3 rounded-lg transition duration-300">Titles</a>
+              </li>
+              <li>
+                <a href="#programs" class="bg-black hover:bg-[#ED1B35] text-white font-semibold hover:text-white py-3 px-3 rounded-lg transition duration-300">Alleyrats' Mission</a>
+              </li>
+              <li>
+                <a href="#programs" class="bg-black hover:bg-[#ED1B35] text-white font-semibold hover:text-white py-3 px-3 rounded-lg transition duration-300">Coaching</a>
+              </li>
+              <li>
+                <a href="/payportal" class="bg-black hover:bg-[#ED1B35] text-white font-semibold hover:text-white py-3 px-3 rounded-lg transition duration-300">Registration</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    
+    
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('./static/chicago.jpg');">
+        <!-- Overlay for better text readability -->
+        <div class="absolute inset-0 bg-black opacity-35"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 text-center text-white">
+            <!-- Bold Header -->
+            <body class="flex items-center justify-center h-screen bg-black text-white">
+                <div class="text-center">
+                    <h1 class="text-5xl md:text-7xl font-semibold mb-8">Countdown to ESEA S54!</h1>
+                    <div id="countdown" class="text-3xl font-mono bg-grey-800 p-20 rounded-lg "></div>
+                </div>
+                
+                <script>
+                    function updateCountdown() {
+                        const targetDate = new Date("July 13, 2025 00:00:00").getTime();
+                        const now = new Date().getTime();
+                        const timeLeft = targetDate - now;
+            
+                        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+            
+                        document.getElementById("countdown").innerHTML = 
+                            `${days}d ${hours}h ${minutes}m ${seconds}s`;
+                    }
+            
+                    updateCountdown();
+                    setInterval(updateCountdown, 1000);
+                </script>
+
+            <!-- Buttons -->
+            <div class="space-x-4">
+                <a href="#contact" class="bg-black hover:bg-[#ED1B35] text-white font-semibold hover:text-white py-3 px-3 rounded-lg transition duration-300">Contact Us</a>
+                <a href="#services" class="bg-black hover:bg-[#ED1B35] text-white font-semibold hover:text-white py-3 px-3 rounded-lg transition duration-300">Schedule</a>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="bg-black py-10 px-4">
+  <div class="max-w-6xl mx-auto">
+    
+
+
+    <h2 class="text-3xl font-bold text-center text-white mb-10">Our Membership Plans</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      
+      <!-- Basic Membership Card -->
+      <div class="bg-black rounded-2xl shadow-md p-6 flex flex-col justify-between text-white">
+        <div class="flex flex-col items-center">
+          <img src="./static/logo.png" alt="Basic Plan" class="w-20 h-20 mb-4 rounded-full shadow-sm">
+          <h3 class="text-xl font-semibold mb-2">Club Member</h3>
+          <p class="text-white text-center mb-4">Perfect for individuals starting out. Enjoy core benefits and community access.</p>
+          <ul class="text-sm text-white list-disc pl-5 mb-4 text-left w-full">
+            <li>Access to community nights</li>
+            <li>Weekly newsletter</li>
+            <li>Discord</li>
+          </ul>
+        </div>
+        <div class="flex gap-4 mt-4">
+          <a href="#contact" class="bg-black hover:bg-[#ED1B35] text-white font-semibold hover:text-white py-3 px-3 rounded-lg transition duration-300">Learn More</a>
+                <a href="#services" class="bg-black hover:bg-[#ED1B35] text-white font-semibold hover:text-white py-3 px-3 rounded-lg transition duration-300">Register</a>
+        </div>
+      </div>
+
+      <!-- Pro Membership Card -->
+      <div class="bg-black rounded-2xl shadow-md p-6 flex flex-col justify-between text-white">
+        <div class="flex flex-col items-center">
+          <img src="./static/logo.png" alt="Pro Plan" class="w-20 h-20 mb-4 rounded-full shadow-sm">
+          <h3 class="text-xl font-semibold mb-2">Competitive Player</h3>
+          <p class="text-white text-center mb-4">For players who want to commit to competitive environments</p>
+          <ul class="text-sm text-white list-disc pl-5 mb-4 text-left w-full">
+            <li>All club memeber features</li>
+            <li>Data-analytics on player insights</li>
+            <li>Coaching Sessions</li>
+            <li>Broadcasted Games</li>
+          </ul>
+        </div>
+        <div class="flex gap-4 mt-4">
+          <a href="#contact" class="bg-black hover:bg-[#ED1B35] text-white font-semibold hover:text-white py-3 px-3 rounded-lg transition duration-300">Learn More</a>
+                <a href="#services" class="bg-black hover:bg-[#ED1B35] text-white font-semibold hover:text-white py-3 px-3 rounded-lg transition duration-300">Register</a>
+        </div>
+      </div>
+
+      <!-- Premium Membership Card -->
+      <div class="bg-black0 rounded-2xl shadow-md p-6 flex flex-col justify-between text-white">
+        <div class="flex flex-col items-center">
+          <img src="./static/logo.png" alt="Premium Plan" class="w-20 h-20 mb-4 rounded-full shadow-sm">
+          <h3 class="text-xl font-semibold mb-2">Recreational Leagues</h3>
+          <p class="text-white text-center mb-4">Just want to play in a recreational league and meet other esport players?</p>
+          <ul class="text-sm text-white list-disc pl-5 mb-4 text-left w-full">
+            <li>Casual weekly leagues to get a taste of competitive play</li>
+            <li>Access to community events</li>
+            <li>Broadcasted Games</li>
+          </ul>
+        </div>
+        <div class="flex gap-4 mt-4">
+          <a href="#contact" class="bg-black hover:bg-[#ED1B35] text-white font-semibold hover:text-white py-3 px-3 rounded-lg transition duration-300">Learn More</a>
+        <a href="#services" class="bg-black hover:bg-[#ED1B35] text-white font-semibold hover:text-white py-3 px-3 rounded-lg transition duration-300">Register</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+    
+    <!-- Event Gallery -->
+    <section id="gallery" class="container mx-auto text-center">
+        <h2 class="text-white text-3xl font-bold mb-6 ">Events: Gallery</h2>
+        <div class="bg-black grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
+            <img src="./static/scrims.jpg" class="rounded-lg shadow-md w-[500px] h-[500px]" alt="alleyrats">
+            <img src="./static/igniteskokie.jpg" class="rounded-lg shadow-md w-full size-full" alt="alleyrats">
+            <img src="./static/maxresdefault.jpg" class="rounded-lg shadow-md w-full size-full" alt="alleyrats">
+            <img src="./static/logo.png" class="rounded-lg shadow-md w-full size-full" alt="alleyrats">
+            <img src="./static/logo2.png" class="rounded-lg  shadow-md w-full size-full" alt="alleyrats">
+        </div>
+    </section>
+    
+    <!-- Programs List -->
+    <section id="programs" class="py-16 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12" data-aos="fade-down" data-aos-delay="50">
+                <h1 class="text-white text-4xl font-semibold">Alleyrat Esports Club</h1>
+                <div class="w-16 h-1 bg-[#ED1B35] mx-auto my-4"></div>
+                <p class="text-white">Here is how the alleyrats came to be.</p>
+            </div>
+            <div class="flex flex-wrap justify-between items-center">
+                <div class="w-full lg:w-1/2 mb-8 lg:mb-0" data-aos="fade-down" data-aos-delay="50">
+                    <img src="./static/gamepicture.jpg" alt="huddle" class="rounded-lg shadow-lg w-full">
+                    <img src="./static/lan1.jpg" alt="huddle" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="w-full lg:w-5/12" data-aos="fade-down" data-aos-delay="150">
+                    <h1 class="text-white text-3xl font-bold">Counter-Strike Club </h1>
+                    <p class="mt-3 mb-6 text-white"> For many, clubs, sports/esports, and competition are only available to them in scholastic environments. Outside of these educational settings, there is little opportunity to participate in these passions in an organized manner, with the common goal of team-competition. Additionally, many of these activities possess barriers to entry that prevent new players from even attempting to join these communities.
+For Counter-Strike specifically, the current system requires new players, regardless of how talented they may be, to clog through at least 4 tiers of organized play to even be considered as a “competitive player.” This barrier to entry is compounded by the fact that many competitively-oriented, veteran players do not want to engage with “subpar teamplay” and have little interest in orienting new players to the game.</p>
+ <p class="mt-3 mb-6 text-white">Currently, the only metric that evaluates a players competitive impact is HLTV rating, which is confusing when the game is not in an organized environment. This ultimately results in our competitive scene being divided by matchmaking systems (and platforms) that do not guarantee fair matches for new players to learn, nor present good ways for veteran players to actually play the game in a professional manner.
+Having a place for organized recreational competitive leagues helps solve the barrier to entry problem by giving community members the space to enjoy their hobby on the terms that they want, whether that means casually learning the game with their friends, or “try-harding” their way through the competitive brackets.
+</p>
+<p class="mt-3 mb-6 text-white">Our mission is to organize competitive Counter-Strike games so that every member of the community can participate regardless of time-commitment or skill. Not only is this about organizing meaningful Counter-Strike games, this is about creating a space where true competition is part of the fun.
+To achieve this goal, The Alley Rats Esports Club aims to offer a recreational league that can act as a stepping-stone for new competitive players while offering travel and team coaching opportunities to build up the broader Midwest CS community.
+</p>
+                    
+                    
+                    <div class="flex items-start space-x-4 mb-6">
+                        <div class="w-75 h-60 flex-shrink-0">
+                            <img src="./static/logo2.png" alt="nationalteam" class="w-full h-full">
+                        </div>
+                        <div>
+                            <h5 class="text-white text-xl font-semibold">Competitive Travel Teams</h5>
+                            <p class="text-white">With numerous local leagues, online leagues at the highschool, collegiate and amatuer levels, many players do not know where they can start their competitive journey.
+                            </p>
+                            <p class="text-white">We believe that playing in a league where most of the competitive playerbase competes on is crucial for player development and scouting.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start space-x-4">
+                        <div class="w-75 h-60 flex-shrink-0">
+                            <img src="./static/logo.png" alt="cafeteros" class="w-full h-full">
+                        </div>
+                        <div>
+                            <h5 class="text-white text-xl font-semibold">Weekly Recreational Leagues</h5>
+                            <p class="text-white">Not everyone has the time or the commitment to play games for more than a couple of hours a week; If this is more your tone, we offer recreational leagues as stepping stones into the competitive scene!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="services" class="text-white py-16 border-t bg-black">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-12" data-aos="fade-down" data-aos-delay="150">
+                <h1 class="text-4xl font-semibold">Esports Titles</h1>
+                <div class="w-16 h-1 bg-[#ED1B35] mx-auto my-4"></div>
+                <p class="text-white">These are all the esports titles we are running online and local events for.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-black shadow-lg rounded-lg p-6" data-aos="fade-down" data-aos-delay="150">
+                    <img src="./static/cs2.png" alt="Event#1" class="mx-auto h-16">
+                    <h5 class="text-xl font-semibold mt-4 mb-3">Counter-Strike 2</h5>
+                    <p class="text-white">"We currently have a competitive roster and a recreational league for this title."</p>
+                </div>
+                <div class="bg-black shadow-lg rounded-lg p-6" data-aos="fade-down" data-aos-delay="250">
+                    <img src="./static/ow2.jpg" alt="Event#2" class="mx-auto h-16">
+                    <h5 class="text-xl font-semibold mt-4 mb-3">Overwatch 2</h5>We currently have a competitive roster and a recreational league for this title.</p>
+                </div>
+                <div class="bg-black shadow-lg rounded-lg p-6" data-aos="fade-down" data-aos-delay="350">
+                    <img src="./static/lol.jpg" alt="Event#3" class="mx-auto h-16">
+                    <h5 class="text-xl font-semibold mt-4 mb-3">League of Legends</h5>
+                    <p class="text-white">We currently have a competitive roster and a recreational league for this title.</p>
+                </div>
+                <div class="bg-black shadow-lg rounded-lg p-6" data-aos="fade-down" data-aos-delay="450">
+                    <img src="./static/rocketleague.jpg" alt="Event#4" class="mx-auto h-16">
+                    <h5 class="text-xl font-semibold mt-4 mb-3">Rocket League</h5>
+                    <p class="text-white">We currently have a competitive roster and a recreational league for this title.</p>
+                    </div>
+                <div class="bg-black shadow-lg rounded-lg p-6" data-aos="fade-down" data-aos-delay="550">
+                    <img src="./static/mr.jpg" alt="Event#5" class="mx-auto h-16">
+                    <h5 class="text-xl font-semibold mt-4 mb-3">Marvel Rivals</h5>
+                    <p class="text-white">We currently have a competitive roster and a recreational league for this title.</p>
+                </div>
+                <div class="bg-black shadow-lg rounded-lg p-6" data-aos="fade-down" data-aos-delay="650">
+                    <img src="./static/mhw.png" alt="Event#5" class="mx-auto h-16">
+                    <h5 class="text-xl font-semibold mt-4 mb-3">Monster Hunter World</h5>
+                    <p class="text-white">We currently have a competitive roster and a recreational league for this title.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
